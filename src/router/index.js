@@ -39,16 +39,47 @@ export const constantRouterMap = [
     path: '/dataService',
     component: Layout,
     name: '数据服务',
-    children: [{
-      path: 'dataService',
-      component: () => import('@/views/dataService/index'),
-      meta: { title: '数据服务', icon: 'example' }
-    }]
+    children: [
+      {
+        path: 'dataService',
+        name: 'dataService',
+        component: () => import('@/views/dataService/index'),
+        meta: { title: '数据服务', icon: 'example' }
+      },
+      {
+        path: 'addService',
+        name: 'addService',
+        component: () => import('@/views/dataService/add/index'),
+        meta: { title: '添加服务', icon: 'example' },
+        hidden: true
+      },
+      {
+        path: 'editService',
+        name: 'editService',
+        component: () => import('@/views/dataService/add/index'),
+        meta: { title: '编辑服务', icon: 'example' },
+        hidden: true
+      },
+      {
+        path: 'enterInfo',
+        name: 'enterInfo',
+        component: () => import('@/views/dataService/enterInfo/index'),
+        meta: { title: '接入信息', icon: 'example' },
+        hidden: true
+      },
+      {
+        path: 'techDocument',
+        name: 'techDocument',
+        component: () => import('@/views/dataService/techDocument/index'),
+        meta: { title: '技术文档', icon: 'example' },
+        hidden: true
+      }
+    ]
   },
   {
     path: '/dataSet',
     component: Layout,
-    name: '数据集',
+    // name: '数据集',
     children: [{
       path: '',
       component: () => import('@/views/dataSet/index'),
@@ -58,7 +89,7 @@ export const constantRouterMap = [
   {
     path: '/solutions',
     component: Layout,
-    name: '解决方案',
+    // name: '解决方案',
     children: [{
       path: '',
       component: () => import('@/views/solutions/index'),

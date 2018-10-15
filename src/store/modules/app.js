@@ -1,12 +1,12 @@
 import Cookies from 'js-cookie'
-
 const app = {
   state: {
     sidebar: {
       opened: !+Cookies.get('sidebarStatus'),
       withoutAnimation: false
     },
-    device: 'desktop'
+    device: 'desktop',
+    dictList: null
   },
   mutations: {
     TOGGLE_SIDEBAR: state => {

@@ -70,7 +70,7 @@ export default {
       this.tableData = null
       getlevelTwoData({ id: this.attrlistId }).then(responce => {
         this.dataTypelist = responce.data
-       })
+      })
     },
     taBle(id) {
       this.loading = true
@@ -118,7 +118,7 @@ export default {
 
 <style  rel="stylesheet/scss" lang="scss">
 .datasetTop{
-  margin-bottom: 15px;
+  margin: 30px;
 }
 .data1,.data2,.data3{
   margin-right: 20px;

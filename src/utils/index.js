@@ -12,7 +12,7 @@ export function parseTime(time, cFormat) {
     date = time
   } else {
     if (('' + time).length === 10) time = parseInt(time) * 1000
-    date = new Date(time)
+    date = new Date(parseInt(time))
   }
   const formatObj = {
     y: date.getFullYear(),
@@ -36,8 +36,10 @@ export function parseTime(time, cFormat) {
 }
 
 export function formatTime(time, option) {
-  time = +time * 1000
-  const d = new Date(time)
+  if (('' + time).length === 10) {
+    time = parseInt(time) * 1000
+  }
+  const d = new Date(parseInt(time))
   const now = Date.now()
 
   const diff = (now - d) / 1000
@@ -66,5 +68,19 @@ export function formatTime(time, option) {
       d.getMinutes() +
       '分'
     )
+  }
+}
+
+export function cutStringByNum(str, num) {
+  if (str == null) {
+    return ''
+  }
+  if (str === '') {
+    return ''
+  }
+  if (str.length && str.length > num) {
+    return str.trim().substring(0, num) + '...'
+  } else {
+    return str
   }
 }

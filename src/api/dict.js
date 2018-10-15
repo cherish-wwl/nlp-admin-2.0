@@ -1,12 +1,5 @@
 import request from '@/utils/request'
 
-// export function getDictList(params) {
-//   return request({
-//     url: '/dict/list',
-//     method: 'post',
-//     data: params
-//   })
-// }
 export function getlevelOneData() {
   return request({
     url: '/dataset/attrlist',

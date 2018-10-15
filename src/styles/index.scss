@@ -70,9 +70,44 @@ a:hover {
 
 //main-container全局样式
 .app-main{
-  min-height: 100%
+  min-height: 100%;
+  padding: 20px;
+  background-color: #f8f8f8;
 }
 
 .app-container {
   padding: 20px;
+}
+
+.text_center{
+  text-align: center;
+}
+
+
+.font14{
+  font-size: 14px;
+}
+.font16{
+  font-size: 16px;
+}
+.font18{
+  font-size: 18px;
+}
+.font20{
+  font-size: 20px;
+}
+.colorA{
+  color: #4be531;
+}
+.colorB{
+  color: #e5a91d;
+}
+.colorC{
+  color: #db31e5;
+}
+.colorD{
+  color: red;
+}
+.bg_colorA{
+  background-color: #ffffff;
 }
